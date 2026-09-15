@@ -60,3 +60,9 @@ footer small{display:block;line-height:1.6;text-align:center}
   footer>p{margin-bottom:20px}
   .footerLinks{gap:14px 18px;padding:16px 0;margin-bottom:16px}
 }
+.ecosystemCarousel{position:relative;margin:42px 0 34px;border-radius:28px;overflow:hidden;background:#102b3e;box-shadow:0 20px 55px rgba(20,47,54,.18)}
+.ecosystemTrack{display:flex;width:100%;transition:transform .65s cubic-bezier(.22,1,.36,1)}
+.ecosystemSlide{position:relative;flex:0 0 100%;aspect-ratio:16/7;min-height:220px}.ecosystemSlide img{object-fit:cover}
+.carouselArrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(13,31,43,.62);color:#fff;font-size:30px;line-height:1;cursor:pointer}.carouselArrow:hover{background:rgba(13,31,43,.9)}.carouselArrow.prev{left:16px}.carouselArrow.next{right:16px}
+.carouselDots{position:absolute;z-index:2;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:7px}.carouselDots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer}.carouselDots button.active{width:24px;border-radius:999px;background:#f5c64f}
+@media(max-width:680px){.ecosystemCarousel{margin:30px 0 28px;border-radius:22px}.ecosystemSlide{aspect-ratio:4/3;min-height:210px}.carouselArrow{width:36px;height:36px;font-size:25px}.carouselArrow.prev{left:10px}.carouselArrow.next{right:10px}}

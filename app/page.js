@@ -37,6 +37,12 @@ const translations = {
   'Build together. Learn together. Grow together.': '一起建设，一起学习，共同成长。', 'Community-led • Transparent • Open': '社区主导 • 透明 • 开放', '© 2026 SHAUN': '© 2026 SHAUN'
 }
 
+const ecosystemSlides = [
+  ['/assets/gold-ecosystem.png', 'Foundation launch and ecosystem vision'],
+  ['/assets/community-network.png', 'Community collaboration and ecosystem network'],
+  ['/assets/shaun-community.png', 'SHAUN community launch milestone']
+]
+
 const reveal = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: .6, ease: [0.22, 1, 0.36, 1] } }
@@ -61,6 +67,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [ecosystemSlide, setEcosystemSlide] = useState(0)
 
   useEffect(() => {
     const onScroll = () => {
@@ -71,6 +78,11 @@ export default function Home() {
     onScroll()
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => setEcosystemSlide(current => (current + 1) % ecosystemSlides.length), 5000)
+    return () => clearInterval(timer)
   }, [])
 
   useEffect(() => {
@@ -226,6 +238,14 @@ export default function Home() {
           <Pill>Different roles, shared ecosystem</Pill>
           <h2>Ant.fun builds the product. <span>SHAUN supports the community.</span></h2>
         </motion.div>
+        <div className="ecosystemCarousel" aria-label="SHAUN ecosystem stories">
+          <div className="ecosystemTrack" style={{ transform: `translateX(-${ecosystemSlide * 100}%)` }}>
+            {ecosystemSlides.map(([src, alt]) => <div className="ecosystemSlide" key={src}><Image src={src} alt={alt} fill sizes="(max-width:900px) 92vw, 1120px" /></div>)}
+          </div>
+          <button className="carouselArrow prev" type="button" onClick={() => setEcosystemSlide((ecosystemSlide - 1 + ecosystemSlides.length) % ecosystemSlides.length)} aria-label="Previous story">‹</button>
+          <button className="carouselArrow next" type="button" onClick={() => setEcosystemSlide((ecosystemSlide + 1) % ecosystemSlides.length)} aria-label="Next story">›</button>
+          <div className="carouselDots">{ecosystemSlides.map(([, alt], index) => <button className={index === ecosystemSlide ? 'active' : ''} type="button" key={alt} onClick={() => setEcosystemSlide(index)} aria-label={`Show story ${index + 1}`} />)}</div>
+        </div>
         <div className="roleGrid">
           <div className="roleCard purple">
             <div className="roleLogo"><Image src="/assets/antfun-logo.png" alt="Ant.fun" width={52} height={52} unoptimized /></div><h3>Ant.fun</h3>
