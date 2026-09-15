@@ -195,7 +195,7 @@ export default function Home() {
 
       <section className="section story">
         <div className="storyCard">
-          <div className="storyImage"><Image src="/assets/founder-wide.png" alt="SHAUN story artwork" fill sizes="(max-width:900px) 100vw, 44vw" /></div>
+          <div className="storyImage"><Image src="/assets/founder-portrait.png" alt="SHAUN founder portrait" fill sizes="(max-width:900px) 100vw, 44vw" /></div>
           <div className="storyText">
             <Pill>The story behind the name</Pill>
             <h2>SHAUN is a name.<br/><span>The vision belongs to the community.</span></h2>
