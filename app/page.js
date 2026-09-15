@@ -16,6 +16,27 @@ const menu = [
   ['SHAUN', '#shaun'], ['Community', '#community'], ['FAQ', '#faq']
 ]
 
+const translations = {
+  'Home': '首页', 'About': '关于', 'Vision': '愿景', 'Community': '社区', 'FAQ': '常见问题',
+  'Buy $SHAUN': '购买 $SHAUN', 'Meet SHAUN': '认识 SHAUN', 'Community-led • Open • Transparent': '社区主导 • 开放 • 透明',
+  'Build together.': '一起建设。', 'Grow together.': '共同成长。',
+  'SHAUN is a community-powered ecosystem initiative creating a friendlier, more open way to learn, build and participate on-chain.': 'SHAUN 是一个由社区推动的生态计划，让链上学习、建设和参与变得更友好、更开放。',
+  'Walk with Shaun, enjoy an extraordinary life.': '与 Shaun 同行，享受非凡人生。', 'About SHAUN': '关于 SHAUN',
+  'Serious mission.': '认真使命。', 'Friendly energy.': '友好能量。', 'Our Vision': '我们的愿景',
+  'Make on-chain participation ': '让链上参与变得', 'easier, safer and more open.': '更简单、更安全、更开放。',
+  'User Growth': '用户增长', 'Community Collaboration': '社区协作', 'Ecosystem Integration': '生态连接',
+  'Meet SHAUN': '认识 SHAUN', 'One bull.': '一头牛。', 'One community.': '一个社区。', 'Bigger dreams.': '更大的梦想。',
+  'Open participation': '开放参与', 'Security awareness': '安全意识', 'Open tools': '开放工具', 'Community building': '社区建设',
+  'Ant.fun builds the product. ': 'Ant.fun 打造产品。', 'SHAUN supports the community.': 'SHAUN 支持社区。',
+  'Different roles, shared ecosystem': '不同角色，共享生态', 'Ant.fun': 'Ant.fun', 'Product • Technology • Operations • User Experience': '产品 • 技术 • 运营 • 用户体验',
+  'SHAUN': 'SHAUN', 'Community • Education • Ecosystem Support • Collaboration': '社区 • 教育 • 生态支持 • 协作',
+  'Community Vibes': '社区氛围', 'Same memes.': '相同的梗。', 'Bigger dreams.': '更大的梦想。',
+  'The story behind the name': '名字背后的故事', 'SHAUN is a name.': 'SHAUN 是一个名字。', 'The vision belongs to the community.': '愿景属于社区。',
+  'Quick FAQ': '常见问题', 'Short answers.': '简短回答。', 'No crypto essay.': '没有加密长文。',
+  'Ready to join the herd?': '准备加入社区了吗？', 'Walk with Shaun.': '与 Shaun 同行。', 'Enjoy an extraordinary life.': '享受非凡人生。',
+  'Build together. Learn together. Grow together.': '一起建设，一起学习，共同成长。', 'Community-led • Transparent • Open': '社区主导 • 透明 • 开放', '© 2026 SHAUN': '© 2026 SHAUN'
+}
+
 const reveal = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: .6, ease: [0.22, 1, 0.36, 1] } }
@@ -46,6 +67,18 @@ export default function Home() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en'
+    const map = language === 'zh' ? translations : Object.fromEntries(Object.entries(translations).map(([english, chinese]) => [chinese, english]))
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
+    const nodes = []
+    while (walker.nextNode()) nodes.push(walker.currentNode)
+    nodes.forEach(node => {
+      const value = node.nodeValue.trim()
+      if (map[value]) node.nodeValue = node.nodeValue.replace(value, map[value])
+    })
+  }, [language])
 
   async function copyCA() {
     await navigator.clipboard.writeText(CA)
