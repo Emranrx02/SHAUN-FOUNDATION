@@ -95,7 +95,7 @@ export default function Home() {
           <p>SHAUN is a community-powered ecosystem initiative creating a friendlier, more open way to learn, build and participate on-chain.</p>
           <div className="heroActions">
             <BuyButton />
-            <a className="softBtn" href="#about">Meet SHAUN <ArrowRight size={18}/></a>
+            <a className="softBtn" href="#shaun">Meet SHAUN <ArrowRight size={18}/></a>
           </div>
           <div className="miniNote">Walk with Shaun, enjoy an extraordinary life.</div>
         </motion.div>
