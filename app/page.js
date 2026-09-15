@@ -166,7 +166,7 @@ export default function Home() {
         </motion.div>
         <div className="roleGrid">
           <div className="roleCard purple">
-            <div className="roleLogo"><Image src="/assets/antfun-logo.png" alt="Ant.fun" width={52} height={52} /></div><h3>Ant.fun</h3>
+            <div className="roleLogo"><Image src="/assets/antfun-logo.png" alt="Ant.fun" width={52} height={52} unoptimized /></div><h3>Ant.fun</h3>
             <p>Product • Technology • Operations • User Experience</p>
           </div>
           <div className="roleArrow">↔</div>
