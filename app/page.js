@@ -23,7 +23,7 @@ const translations = {
   'SHAUN is a community-powered ecosystem initiative creating a friendlier, more open way to learn, build and participate on-chain.': 'SHAUN 是一个由社区推动的生态计划，让链上学习、建设和参与变得更友好、更开放。',
   'Walk with Shaun, enjoy an extraordinary life.': '与 Shaun 同行，享受非凡人生。', 'About SHAUN': '关于 SHAUN',
   'Serious mission.': '认真使命。', 'Friendly energy.': '友好能量。', 'Our Vision': '我们的愿景',
-  'Make on-chain participation ': '让链上参与变得', 'easier, safer and more open.': '更简单、更安全、更开放。',
+  'Make on-chain participation': '让链上参与变得', 'easier, safer and more open.': '更简单、更安全、更开放。',
   'User Growth': '用户增长', 'Community Collaboration': '社区协作', 'Ecosystem Integration': '生态连接',
   'Meet SHAUN': '认识 SHAUN', 'One bull.': '一头牛。', 'One community.': '一个社区。', 'Bigger dreams.': '更大的梦想。',
   'Open participation': '开放参与', 'Security awareness': '安全意识', 'Open tools': '开放工具', 'Community building': '社区建设',
@@ -78,6 +78,16 @@ export default function Home() {
       const value = node.nodeValue.trim()
       if (map[value]) node.nodeValue = node.nodeValue.replace(value, map[value])
     })
+    const heroTitle = document.querySelector('.hero h1')
+    const visionTitle = document.querySelector('.visionText h2')
+    if (heroTitle) {
+      heroTitle.firstChild.nodeValue = language === 'zh' ? '一起建设。 ' : 'Build together. '
+      heroTitle.querySelector('span').textContent = language === 'zh' ? '共同成长。' : 'Grow together.'
+    }
+    if (visionTitle) {
+      visionTitle.firstChild.nodeValue = language === 'zh' ? '让链上参与变得 ' : 'Make on-chain participation '
+      visionTitle.querySelector('span').textContent = language === 'zh' ? '更简单、更安全、更开放。' : 'easier, safer and more open.'
+    }
   }, [language])
 
   async function copyCA() {
