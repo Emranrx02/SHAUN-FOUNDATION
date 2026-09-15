@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   ArrowRight, Check, Copy, ExternalLink, Globe2, HeartHandshake,
-  Menu, Rocket, Send, ShieldCheck, Sparkles, Users, X, Zap, BookOpen
+  Menu, Rocket, Send, ShieldCheck, Users, X, Zap, BookOpen
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -51,7 +51,7 @@ function BuyButton({ small = false }) {
 }
 
 function Pill({ children }) {
-  return <span className="pill"><Sparkles size={14} />{children}</span>
+  return <span className="pill">{children}</span>
 }
 
 export default function Home() {
