@@ -35,6 +35,7 @@ function Pill({ children }) {
 
 export default function Home() {
   const [open, setOpen] = useState(false)
+  const [communityOpen, setCommunityOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -60,7 +61,12 @@ export default function Home() {
         </a>
 
         <div className="menu desktop">
-          {menu.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
+          {menu.map(([label, href]) => label === 'Community' ? (
+            <div className="communityNav" key={label}>
+              <button className="communityToggle" onClick={() => setCommunityOpen(!communityOpen)} aria-expanded={communityOpen}>Community</button>
+              {communityOpen && <div className="communityPopover"><a href="https://x.com/SHAUNCommunity" target="_blank" rel="noreferrer" aria-label="X Community"><X size={17}/></a><a href="https://t.me/shauncommunity" target="_blank" rel="noreferrer" aria-label="Telegram Community"><Send size={17}/></a></div>}
+            </div>
+          ) : <a key={label} href={href}>{label}</a>)}
         </div>
 
         <div className="navRight">
