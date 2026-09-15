@@ -60,9 +60,14 @@ export default function Home() {
   const [language, setLanguage] = useState('en')
   const [copied, setCopied] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12)
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0)
+    }
     onScroll()
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
@@ -98,6 +103,7 @@ export default function Home() {
 
   return (
     <main>
+      <div className="scrollProgress" style={{ width: `${scrollProgress}%` }} />
       <nav className={scrolled ? 'nav scrolled' : 'nav'}>
         <a className="brand" href="#home">
           <Image src="/assets/shaun-logo.jpg" alt="SHAUN" width={44} height={44} priority />
