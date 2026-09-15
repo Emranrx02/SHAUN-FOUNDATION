@@ -162,7 +162,7 @@ export default function Home() {
       <section className="section roles">
         <motion.div className="sectionHead center" initial="hidden" whileInView="show" viewport={{once:true}} variants={reveal}>
           <Pill>Different roles, shared ecosystem</Pill>
-          <h2>Ant.fun builds the product.<br/><span>SHAUN supports the community.</span></h2>
+          <h2>Ant.fun builds the product. <span>SHAUN supports the community.</span></h2>
         </motion.div>
         <div className="roleGrid">
           <div className="roleCard purple">
