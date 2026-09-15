@@ -64,6 +64,8 @@ export default function Home() {
         </div>
 
         <div className="navRight">
+          <a className="socialNav telegramNav" href="https://t.me/shauncommunity" target="_blank" rel="noreferrer" aria-label="Telegram Community"><Send size={16}/></a>
+          <a className="socialNav" href="https://x.com/SHAUNCommunity" target="_blank" rel="noreferrer" aria-label="X Community"><X size={16}/></a>
           <BuyButton small />
           <button className="menuBtn" onClick={() => setOpen(!open)} aria-label="Open menu">{open ? <X /> : <Menu />}</button>
         </div>
@@ -71,6 +73,8 @@ export default function Home() {
         {open && (
           <div className="mobileMenu">
             {menu.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}<ArrowRight size={16}/></a>)}
+            <a href="https://t.me/shauncommunity" target="_blank" rel="noreferrer"><Send size={16}/> Telegram Community</a>
+            <a href="https://x.com/SHAUNCommunity" target="_blank" rel="noreferrer"><X size={16}/> X Community</a>
             <BuyButton />
           </div>
         )}
