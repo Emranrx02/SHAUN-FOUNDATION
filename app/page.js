@@ -171,7 +171,7 @@ export default function Home() {
           </div>
           <div className="roleArrow">↔</div>
           <div className="roleCard yellow">
-            <div className="roleEmoji">🐂</div><h3>SHAUN</h3>
+            <div className="roleLogo shaunLogo"><Image src="/assets/shaun-logo.jpg" alt="SHAUN rocket bull" width={52} height={52} /></div><h3>SHAUN</h3>
             <p>Community • Education • Ecosystem Support • Collaboration</p>
           </div>
         </div>
