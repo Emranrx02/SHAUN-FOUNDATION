@@ -53,7 +53,7 @@ footer{padding:42px 22px 110px}
 footer .brand{margin-bottom:12px}
 footer>p{margin:0 0 24px;line-height:1.6}
 .footerLinks{align-items:center;gap:12px 24px;margin:0 0 18px;padding:18px 0}
-footer small{display:block;line-height:1.6}
+footer small{display:block;line-height:1.6;text-align:center}
 @media(max-width:680px){
   footer{padding:34px 22px 105px}
   footer>p{margin-bottom:20px}

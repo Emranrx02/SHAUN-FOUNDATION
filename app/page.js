@@ -229,7 +229,7 @@ export default function Home() {
         <a className="brand" href="#home"><Image src="/assets/shaun-logo.jpg" alt="SHAUN rocket bull" width={42} height={42}/><div><strong>SHAUN</strong></div></a>
         <p>Community-led • Transparent • Open</p>
         <div className="footerLinks">{menu.map(([label,href])=><a href={href} key={label}>{label}</a>)}<a href={BUY_URL} target="_blank" rel="noreferrer">Buy $SHAUN <ExternalLink size={13}/></a></div>
-        <small>© 2026 SHAUN. Community website concept.</small>
+        <small>© 2026 SHAUN</small>
       </footer>
 
       <div className="mobileBuy"><BuyButton /></div>
