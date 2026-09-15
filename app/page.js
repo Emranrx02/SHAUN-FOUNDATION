@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   ArrowRight, Check, Copy, ExternalLink, Globe2, HeartHandshake,
-  Menu, Rocket, ShieldCheck, Sparkles, Users, X, Zap, BookOpen
+  Menu, Rocket, Send, ShieldCheck, Sparkles, Users, X, Zap, BookOpen
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -228,7 +228,7 @@ export default function Home() {
       <footer>
         <a className="brand" href="#home"><Image src="/assets/shaun-logo.jpg" alt="SHAUN rocket bull" width={42} height={42}/><div><strong>SHAUN</strong></div></a>
         <p>Community-led • Transparent • Open</p>
-        <div className="footerLinks">{menu.map(([label,href])=><a href={href} key={label}>{label}</a>)}<a href={BUY_URL} target="_blank" rel="noreferrer">Buy $SHAUN <ExternalLink size={13}/></a></div>
+        <div className="footerLinks">{menu.map(([label,href])=><a href={href} key={label}>{label}</a>)}<a href={BUY_URL} target="_blank" rel="noreferrer">Buy $SHAUN <ExternalLink size={13}/></a><a href="https://t.me/shauncommunity" target="_blank" rel="noreferrer"><Send size={14}/> Telegram</a><a href="https://x.com/SHAUNCommunity" target="_blank" rel="noreferrer"><X size={14}/> X Community</a></div>
         <small>© 2026 SHAUN</small>
       </footer>
 
