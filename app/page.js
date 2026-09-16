@@ -19,8 +19,8 @@ const menu = [
 const translations = {
   'Home': '首页', 'About': '关于', 'Vision': '愿景', 'Community': '社区', 'FAQ': '常见问题',
   'Buy $SHAUN': '购买 $SHAUN', 'Meet SHAUN': '认识 SHAUN', 'Community-led • Open • Transparent': '社区主导 • 开放 • 透明',
-  'Walk with SHUAN, enjoy an extraordinary life.': '与 SHUAN 同行，享受非凡人生。',
-  'SHUAN Foundation incubates its first ecosystem application.': 'SHUAN 基金会孵化其首个生态应用。', 'About SHAUN': '关于 SHAUN',
+  'Walk with SHAUN, enjoy an extraordinary life.': '与 SHAUN 同行，享受非凡人生。',
+  'SHAUN Foundation incubates its first ecosystem application.': 'SHAUN 基金会孵化其首个生态应用。', 'About SHAUN': '关于 SHAUN',
   'Serious mission.': '认真使命。', 'Friendly energy.': '友好能量。', 'Our Vision': '我们的愿景',
   'Make on-chain participation': '让链上参与变得', 'easier, safer and more open.': '更简单、更安全、更开放。',
   'User Growth': '用户增长', 'Community Collaboration': '社区协作', 'Ecosystem Integration': '生态连接',
@@ -32,7 +32,7 @@ const translations = {
   'Community Vibes': '社区氛围', 'Same memes.': '相同的梗。', 'Bigger dreams.': '更大的梦想。',
   'The story behind the name': '名字背后的故事', 'SHAUN is a name.': 'SHAUN 是一个名字。', 'The vision belongs to the community.': '愿景属于社区。',
   'Quick FAQ': '常见问题', 'Short answers.': '简短回答。', 'No crypto essay.': '没有加密长文。',
-  'Ready to join the herd?': '准备加入社区了吗？', 'Walk with Shaun.': '与 Shaun 同行。', 'Enjoy an extraordinary life.': '享受非凡人生。',
+  'Ready to join the herd?': '准备加入社区了吗？', 'Walk with SHAUN.': '与 SHAUN 同行。', 'Enjoy an extraordinary life.': '享受非凡人生。',
   'Build together. Learn together. Grow together.': '一起建设，一起学习，共同成长。', 'Community-led • Transparent • Open': '社区主导 • 透明 • 开放', '© 2026 SHAUN': '© 2026 SHAUN'
 }
 
@@ -97,7 +97,7 @@ export default function Home() {
     const heroTitle = document.querySelector('.hero h1')
     const visionTitle = document.querySelector('.visionText h2')
     if (heroTitle) {
-      heroTitle.firstChild.nodeValue = language === 'zh' ? '与 SHUAN 同行，享受非凡人生。' : 'Walk with SHUAN, enjoy an extraordinary life.'
+      heroTitle.firstChild.nodeValue = language === 'zh' ? '与 SHAUN 同行，享受非凡人生。' : 'Walk with SHAUN, enjoy an extraordinary life.'
       heroTitle.querySelector('span').textContent = ''
     }
     if (visionTitle) {
@@ -154,13 +154,13 @@ export default function Home() {
         <div className="blob blob2" />
         <motion.div className="heroCopy" initial="hidden" animate="show" variants={reveal}>
           <Pill>Community-led • Open • Transparent</Pill>
-          <h1>Walk with SHUAN, enjoy an extraordinary life. <span /></h1>
-          <p>SHUAN Foundation incubates its first ecosystem application.</p>
+          <h1>Walk with SHAUN, enjoy an extraordinary life. <span /></h1>
+          <p>SHAUN Foundation incubates its first ecosystem application.</p>
           <div className="heroActions">
             <BuyButton />
             <a className="softBtn" href="#shaun">Meet SHAUN <ArrowRight size={18}/></a>
           </div>
-          <div className="miniNote">Walk with SHUAN, enjoy an extraordinary life.</div>
+          <div className="miniNote">Walk with SHAUN, enjoy an extraordinary life.</div>
         </motion.div>
         <motion.div className="heroMascot" initial={{ opacity: 0, scale: .92, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: .8, delay: .1 }}>
           <div className="mascotCard">
@@ -301,7 +301,7 @@ export default function Home() {
       <section className="cta">
         <div className="ctaMascot"><Image src="/assets/shaun-logo.jpg" alt="SHAUN" fill sizes="180px" /></div>
         <Pill>Ready to join the herd?</Pill>
-        <h2>Walk with Shaun.<br/><span>Enjoy an extraordinary life.</span></h2>
+        <h2>Walk with SHAUN.<br/><span>Enjoy an extraordinary life.</span></h2>
         <p>Build together. Learn together. Grow together.</p>
         <BuyButton />
       </section>
