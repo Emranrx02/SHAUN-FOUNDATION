@@ -32,7 +32,7 @@ const translations = {
   'Community Vibes': '社区氛围', 'Same memes.': '相同的梗。', 'Bigger dreams.': '更大的梦想。',
   'The story behind the name': '名字背后的故事', 'SHAUN is a name.': 'SHAUN 是一个名字。', 'The vision belongs to the community.': '愿景属于社区。',
   'Quick FAQ': '常见问题', 'Short answers.': '简短回答。', 'No crypto essay.': '没有加密长文。',
-  'Ready to join the herd?': '准备加入社区了吗？', 'Walk with SHAUN.': '与 SHAUN 同行。', 'Enjoy an extraordinary life.': '享受非凡人生。',
+  'Ready to join the herd?': '准备加入社区了吗？', 'Walk with SHAUN.': '与 SHAUN 同行。', 'Experience an extraordinary life with SHAUN.': '与 SHAUN 一起体验非凡人生。',
   'Build together. Learn together. Grow together.': '一起建设，一起学习，共同成长。', 'Community-led • Transparent • Open': '社区主导 • 透明 • 开放', '© 2026 SHAUN': '© 2026 SHAUN'
 }
 
@@ -301,7 +301,7 @@ export default function Home() {
       <section className="cta">
         <div className="ctaMascot"><Image src="/assets/shaun-logo.jpg" alt="SHAUN" fill sizes="180px" /></div>
         <Pill>Ready to join the herd?</Pill>
-        <h2>Walk with SHAUN.<br/><span>Enjoy an extraordinary life.</span></h2>
+        <h2>Walk with SHAUN.<br/><span>Experience an extraordinary life with SHAUN.</span></h2>
         <p>Build together. Learn together. Grow together.</p>
         <BuyButton />
       </section>
