@@ -19,9 +19,8 @@ const menu = [
 const translations = {
   'Home': '首页', 'About': '关于', 'Vision': '愿景', 'Community': '社区', 'FAQ': '常见问题',
   'Buy $SHAUN': '购买 $SHAUN', 'Meet SHAUN': '认识 SHAUN', 'Community-led • Open • Transparent': '社区主导 • 开放 • 透明',
-  'Build together.': '一起建设。', 'Grow together.': '共同成长。',
-  'SHAUN is a community-powered ecosystem initiative creating a friendlier, more open way to learn, build and participate on-chain.': 'SHAUN 是一个由社区推动的生态计划，让链上学习、建设和参与变得更友好、更开放。',
-  'Walk with Shaun, enjoy an extraordinary life.': '与 Shaun 同行，享受非凡人生。', 'About SHAUN': '关于 SHAUN',
+  'Walk with SHUAN, enjoy an extraordinary life.': '与 SHUAN 同行，享受非凡人生。',
+  'SHUAN Foundation incubates its first ecosystem application.': 'SHUAN 基金会孵化其首个生态应用。', 'About SHAUN': '关于 SHAUN',
   'Serious mission.': '认真使命。', 'Friendly energy.': '友好能量。', 'Our Vision': '我们的愿景',
   'Make on-chain participation': '让链上参与变得', 'easier, safer and more open.': '更简单、更安全、更开放。',
   'User Growth': '用户增长', 'Community Collaboration': '社区协作', 'Ecosystem Integration': '生态连接',
@@ -98,8 +97,8 @@ export default function Home() {
     const heroTitle = document.querySelector('.hero h1')
     const visionTitle = document.querySelector('.visionText h2')
     if (heroTitle) {
-      heroTitle.firstChild.nodeValue = language === 'zh' ? '一起建设。 ' : 'Build together. '
-      heroTitle.querySelector('span').textContent = language === 'zh' ? '共同成长。' : 'Grow together.'
+      heroTitle.firstChild.nodeValue = language === 'zh' ? '与 SHUAN 同行，享受非凡人生。' : 'Walk with SHUAN, enjoy an extraordinary life.'
+      heroTitle.querySelector('span').textContent = ''
     }
     if (visionTitle) {
       visionTitle.firstChild.nodeValue = language === 'zh' ? '让链上参与变得 ' : 'Make on-chain participation '
@@ -155,13 +154,13 @@ export default function Home() {
         <div className="blob blob2" />
         <motion.div className="heroCopy" initial="hidden" animate="show" variants={reveal}>
           <Pill>Community-led • Open • Transparent</Pill>
-          <h1>Build together <span>Grow together</span></h1>
-          <p>SHAUN is a community-powered ecosystem initiative creating a friendlier, more open way to learn, build and participate on-chain.</p>
+          <h1>Walk with SHUAN, enjoy an extraordinary life. <span /></h1>
+          <p>SHUAN Foundation incubates its first ecosystem application.</p>
           <div className="heroActions">
             <BuyButton />
             <a className="softBtn" href="#shaun">Meet SHAUN <ArrowRight size={18}/></a>
           </div>
-          <div className="miniNote">Walk with Shaun, enjoy an extraordinary life.</div>
+          <div className="miniNote">Walk with SHUAN, enjoy an extraordinary life.</div>
         </motion.div>
         <motion.div className="heroMascot" initial={{ opacity: 0, scale: .92, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: .8, delay: .1 }}>
           <div className="mascotCard">

@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'SHAUN | Build Together. Grow Together.',
-  description: 'A community-led ecosystem initiative focused on open participation, education and collaboration.',
+  title: 'SHAUN | Walk with SHUAN, enjoy an extraordinary life.',
+  description: 'SHUAN Foundation incubates its first ecosystem application.',
   icons: {
     icon: '/assets/shaun-logo.jpg',
     apple: '/assets/shaun-logo.jpg',
